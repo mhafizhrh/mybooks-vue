@@ -37,7 +37,7 @@
             }
         },
        	created(props) {
-       		document.title = this.$props.title == undefined ? 'MyBooks' : 'MyBooks - ' + this.$props.title
+       		document.title = this.$props.title == undefined ? 'MyBooks-Vue' : 'MyBooks-Vue - ' + this.$props.title
        	}
     }
 </script>

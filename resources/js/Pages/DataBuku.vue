@@ -88,7 +88,7 @@
 								<td v-text="book.no_isbn"></td>
 								<td v-text="book.jumlah_buku"></td>
 								<td>
-									<modal2 :caller-element="'a'" :caller-text="`<i class='bi bi-pencil-square'></i> Ubah`" :caller-class="'text-decoration-none me-3'" @clicked="updateForm(book)">
+									<modal2 :caller-element="'a'" :caller-text="`<i class='bi bi-pencil-square'></i> Ubah`" :caller-class="'text-decoration-none text-warning me-3'" @clicked="updateForm(book)" @close="form.reset()">
 										<template #title>
 											Ubah Data
 										</template>
@@ -130,7 +130,7 @@
 											<button class="btn btn-success" @click="update">Simpan</button>
 										</template>
 									</modal2>
-									<a href="#" class="text-decoration-none" @click.prevent="destroy(book.id)"><i class="bi bi-trash"></i> Hapus</a>
+									<a href="#" class="text-decoration-none text-danger" @click.prevent="destroy(book.id)"><i class="bi bi-trash"></i> Hapus</a>
 								</td>
 							</tr>
 						</tbody>
